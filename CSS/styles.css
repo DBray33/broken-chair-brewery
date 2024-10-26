@@ -1,0 +1,433 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #003e60;
+  --secondary-color: #fff8a1;
+  --tertiary-color: #fe8d19;
+  --dark-color: #272d35;
+  --light-color: #f7f6e7;
+}
+
+html,
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  scroll-padding-top: 68px; /* Adjust this value based on the height of your navbar */
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* UTILITY CLASSES */
+.container {
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 1.1rem 2.3rem;
+  border: 1px solid var(--secondary-color);
+  border-radius: 32px;
+  background: var(--secondary-color);
+  color: var(--dark-color);
+  cursor: pointer;
+  /* transition: all 0.2s; */
+}
+
+.btn:hover {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  cursor: pointer;
+  transform: scale(2);
+}
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Tooltip text */
+.tooltip .tooltip-text {
+  visibility: hidden;
+  /* width: 160px; */
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 5px 5px;
+  border-radius: 4px;
+  position: absolute;
+  z-index: 30;
+  bottom: -125%; /* Adjust this based on where you want the text */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  white-space: nowrap; /* Prevents text from wrapping */
+}
+
+/* Show the tooltip text on hover */
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Section Header */
+.section-header {
+  max-width: 750px;
+  padding-top: 1rem;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--dark-color);
+  margin-bottom: 0.5rem;
+}
+
+.heading-border {
+  width: 64px;
+  height: 4px;
+  background: var(--primary-color);
+  margin: 0 auto 2rem;
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: var(--primary-color);
+  /* opacity: 0.8; */
+  padding: 1rem 0.5rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  /* overflow: hidden; */
+  transition: background-color 0.5s ease-in-out;
+}
+
+.navbar.navbar-scroll {
+  background-color: var(--primary-color);
+  backdrop-filter: blur(10px);
+  opacity: 0.8;
+}
+
+.navbar-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .main-menu-items {
+  display: inline-flex;
+  overflow-x: auto;
+} */
+
+.navbar .main-menu-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  font-weight: 600;
+}
+
+.navbar a {
+  color: var(--secondary-color);
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.navbar a:hover {
+  color: var(--tertiary-color);
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+/* MOBILE MENU */
+.mobile-menu {
+  display: none;
+}
+
+.navbar .mobile-menu-toggle {
+  color: #fff;
+  cursor: pointer;
+}
+
+.navbar .mobile-menu-items {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  opacity: 0.95;
+  padding: 3rem 2rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+.navbar .mobile-menu-items.active {
+  transform: translateX(0);
+}
+
+.navbar .mobile-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 1.2rem;
+}
+
+/* HAMBURGER MENU */
+.mobile-menu-toggle {
+  font-size: 2rem;
+  color: var(--secondary-color);
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+}
+
+/* The image inside the hero section */
+.hero img {
+  position: absolute;
+  top: 15%;
+  left: -10%;
+  width: 100%;
+  height: 75%;
+  object-fit: cover; /* Ensures the image covers the section without distortion */
+  z-index: -1; /* Ensures the image stays behind any text or content */
+  transform: scale(1.4);
+}
+
+.hero .logo {
+  position: absolute; /* Allows the logo to be positioned on top */
+  top: 20%; /* Adjust to position vertically */
+  left: 50%; /* Adjust to position horizontally */
+  transform: translate(-50%, -10%); /*Center the logo */
+  width: 600px;
+  height: auto; /* Keep the aspect ratio */
+  z-index: 10; /* Make sure the logo stays above other content */
+  opacity: 0; /* Start with the logo invisible */
+  transition: opacity 2s ease-in;
+  /* box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.9); */
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.9));
+}
+
+.logo.show {
+  opacity: 1;
+}
+
+.hero .btn {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30;
+}
+
+/* Announcements */
+.announcements .container {
+  background: var(--light-color);
+  width: 100%;
+  padding-bottom: 2rem;
+}
+
+.announcements .list {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.list-header {
+  text-align: center;
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 1rem 0;
+}
+
+.announcements .list-item {
+  max-width: 1200px;
+  width: auto;
+  background-color: #fff;
+  padding: 2rem;
+}
+
+/* Events */
+.events {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 0 2rem 2rem;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.upcoming-events p {
+  padding: 0 2rem;
+}
+
+.event img {
+  transition: transform 0.1s ease-in-out;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  /* object-fit: cover; */
+  aspect-ratio: 1/1;
+}
+
+.event img:hover {
+  transform: scale(1.1);
+}
+
+.event h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Event Tooltip text */
+.event .tooltip .tooltip-text {
+  bottom: 0%; /* Adjust this based on where you want the text */
+}
+
+/* Media Queries */
+@media (max-width: 576px) {
+  .events {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  #main-menu-items {
+    display: none;
+  }
+
+  .navbar .mobile-menu {
+    display: block;
+  }
+
+  .navbar .mobile-menu-toggle {
+    padding-top: 1rem;
+  }
+
+  .events {
+    grid-template-columns: 1fr;
+  }
+
+  .event img:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 801px) {
+  html {
+    scroll-padding-top: 118px;
+  }
+}
+
+@media (max-width: 923px) {
+  html {
+    scroll-padding-top: 133px;
+  }
+}
+
+@media (max-width: 992px) {
+  .events {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1200px) {
+  .events {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1200px) {
+  .events {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .events {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 923px) {
+  html {
+    scroll-padding-top: 133px;
+  }
+}
+
+@media (max-width: 801px) {
+  html {
+    scroll-padding-top: 118px;
+  }
+}
+
+@media (max-width: 768px) {
+  #main-menu-items {
+    display: none;
+  }
+
+  .navbar .mobile-menu {
+    display: block;
+  }
+
+  .navbar .mobile-menu-toggle {
+    padding-top: 1rem;
+  }
+
+  .events {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .events {
+    grid-template-columns: 1fr;
+  }
+}
