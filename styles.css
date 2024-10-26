@@ -95,6 +95,13 @@ img {
   opacity: 1;
 }
 
+@media (max-width: 933px) {
+  .tooltip .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
 /* Section Header */
 .section-header {
   max-width: 750px;
