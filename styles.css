@@ -95,7 +95,7 @@ img {
   opacity: 1;
 }
 
-@media (max-width: 933px) {
+@media (max-width: 769px) {
   .tooltip .tooltip-text {
     visibility: visible;
     opacity: 1;
