@@ -43,3 +43,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+window.addEventListener('load', function () {
+  const iframe = document.querySelector('iframe');
+
+  function resizeIframe() {
+    iframe.style.height =
+      iframe.contentWindow.document.body.scrollHeight + 'px';
+  }
+
+  iframe.onload = resizeIframe;
+  window.addEventListener('resize', resizeIframe);
+});
