@@ -73,7 +73,6 @@ img {
 /* Tooltip text */
 .tooltip .tooltip-text {
   visibility: hidden;
-  /* width: 160px; */
   background-color: #333;
   color: #fff;
   text-align: center;
@@ -81,12 +80,12 @@ img {
   border-radius: 4px;
   position: absolute;
   z-index: 30;
-  bottom: -125%; /* Adjust this based on where you want the text */
+  bottom: -125%;
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
-  white-space: nowrap; /* Prevents text from wrapping */
+  white-space: nowrap;
 }
 
 /* Show the tooltip text on hover */
@@ -165,7 +164,7 @@ img {
   transform: scale(1.1);
 }
 
-/* MOBILE MENU */
+/* Mobile Menu */
 .mobile-menu {
   display: none;
 }
@@ -205,7 +204,7 @@ img {
   font-size: 1.2rem;
 }
 
-/* HAMBURGER MENU */
+/* Hamburger Menu */
 .mobile-menu-toggle {
   font-size: 1rem;
   color: var(--secondary-color);
@@ -219,7 +218,7 @@ img {
   overflow: hidden;
 }
 
-/* The image inside the hero section */
+/* Image inside the hero section */
 .hero img {
   position: absolute;
   top: 15%;
@@ -231,6 +230,7 @@ img {
   transform: scale(1.4);
 }
 
+/* Banner Logo */
 .hero .logo {
   position: absolute; /* Allows the logo to be positioned on top */
   top: 10%; /* Adjust to position vertically */
@@ -249,6 +249,7 @@ img {
   opacity: 1;
 }
 
+/* Shop Apparel btn */
 .hero .btn {
   position: absolute;
   top: 85%;
@@ -257,7 +258,7 @@ img {
   z-index: 30;
 }
 
-/* Announcements */
+/* ANNOUNCEMENTS */
 .announcements .container {
   background: var(--light-color);
   width: 100%;
@@ -286,7 +287,7 @@ img {
   padding: 2rem;
 }
 
-/* Events */
+/* UPCOMING EVENTS */
 .events {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -383,14 +384,38 @@ img {
       -50%,
       -50%
     ); /* Center the logo horizontally and adjust as needed */
+
+    /* Tooltip text */
   }
 
-  @media (max-width: 801px) {
-    html {
-      scroll-padding-top: 118px;
-    }
+  .event .tooltip-text {
+    visibility: hidden;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 10px; /* Double the padding to make it larger */
+    font-size: 2rem; /* Increase font size to double the text size */
+    bottom: -250%; /* Adjust bottom based on where you want the text */
+    border-radius: 4px;
+    position: absolute;
+    z-index: 30;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    /* transition: opacity 0.3s ease-in-out; */
+  }
+
+  .navbar .tooltip-text {
+    display: none;
   }
 }
+
+@media (max-width: 801px) {
+  html {
+    scroll-padding-top: 83px;
+  }
+}
+
 @media (max-width: 768px) {
   #main-menu-items {
     display: none;
