@@ -12,6 +12,7 @@
   --tertiary-color: #fe8d19;
   --dark-color: #272d35;
   --light-color: #f7f6e7;
+  --light-blue: #e3e9ef;
 }
 
 html,
@@ -20,7 +21,7 @@ body {
   line-height: 1.6;
   scroll-behavior: smooth;
   overflow-x: hidden;
-  scroll-padding-top: 67px; /* Adjust this value based on the height of your navbar */
+  scroll-padding-top: 66px; /* Adjust this value based on the height of your navbar */
 }
 
 a {
@@ -330,6 +331,116 @@ img {
 .event .tooltip .tooltip-text {
   bottom: 5%;
   /* Adjust this based on where you want the text */
+}
+
+/* ABOUT SECTION */
+.about-container {
+  background: url('images/ToddJoan.jpg') top center/cover no-repeat;
+  display: flex;
+  flex-wrap: wrap; /* Allows content to adjust for smaller screens */
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  position: relative; /* Necessary to position content absolutely over the background */
+  overflow: hidden;
+}
+
+/* Left side (image) */
+.about-left {
+  flex-basis: 50%; /* Takes up 50% of the width */
+  background: url('images/ToddJoan.jpg') center center/cover no-repeat;
+  min-height: 100%; /* Ensure full height */
+}
+
+/* Right side (text content and light blue background) */
+.about-content {
+  background: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Transparent background for readability */
+  color: #333;
+  padding: 2rem;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 50%; /* Ensures it takes up 50% of the screen */
+  width: 50vw; /* Ensures it covers half the screen */
+  height: 100%; /* Ensures it takes the full height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Headings and text adjustments */
+.about-content h2 {
+  color: var(--dark-color);
+  font-size: clamp(1.8rem, 2.5vw, 2.5rem); /* Dynamically resize heading */
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.about-content p {
+  font-size: clamp(1rem, 1.5vw, 1.2rem); /* Dynamically resize text */
+  margin-bottom: 2rem;
+}
+
+.about-content i {
+  margin-right: 0.5rem;
+  color: var(--dark-color);
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablet and smaller screens */
+@media (max-width: 1024px) {
+  .about-container {
+    height: auto; /* Let content determine height */
+  }
+
+  .about-left,
+  .about-content {
+    width: 100vw; /* Full width for smaller screens */
+    position: relative;
+    left: 0; /* Reset left position */
+    flex-basis: 100%; /* Ensure both sides take full width */
+  }
+
+  .about-content {
+    position: relative;
+    padding: 2rem;
+    height: auto; /* Allow height to adjust with content */
+  }
+}
+
+/* For even smaller screens, make padding smaller and text more compact */
+@media (max-width: 768px) {
+  .about-content {
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .about-content h2 {
+    font-size: clamp(1.4rem, 2vw, 2rem); /* Dynamically resize heading */
+  }
+
+  .about-content p {
+    font-size: clamp(0.9rem, 1.2vw, 1rem); /* Dynamically resize text */
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 576px) {
+  .about-content {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .about-content h2 {
+    font-size: clamp(1.2rem, 1.8vw, 1.6rem); /* Dynamically resize heading */
+  }
 }
 
 /* MEDIA QUERIES */
