@@ -372,22 +372,25 @@ img {
     /* font-size: 0.6rem; */
   }
 
-    .hero .logo {
+  .hero .logo {
     /* Remove display: none and set the logo to scale responsively */
     width: 50%; /* Adjust this percentage to scale the logo appropriately */
     height: auto; /* Maintain aspect ratio */
     max-width: 300px; /* Optional: to limit maximum size */
     top: 50%; /* Adjust vertical positioning if needed */
     left: 50%;
-    transform: translate(-50%, -50%); /* Center the logo horizontally and adjust as needed */
-}
+    transform: translate(
+      -50%,
+      -50%
+    ); /* Center the logo horizontally and adjust as needed */
+  }
 
-@media (max-width: 801px) {
-  html {
-    scroll-padding-top: 118px;
+  @media (max-width: 801px) {
+    html {
+      scroll-padding-top: 118px;
+    }
   }
 }
-
 @media (max-width: 768px) {
   #main-menu-items {
     display: none;
