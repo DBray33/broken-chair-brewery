@@ -95,13 +95,6 @@ img {
   opacity: 1;
 }
 
-@media (max-width: 768px) {
-  .tooltip .tooltip-text {
-    visibility: visible;
-    opacity: 1;
-  }
-}
-
 /* Section Header */
 .section-header {
   max-width: 750px;
@@ -150,11 +143,6 @@ img {
   justify-content: center;
   align-items: center;
 }
-
-/* .main-menu-items {
-  display: inline-flex;
-  overflow-x: auto;
-} */
 
 .navbar .main-menu-list {
   display: flex;
@@ -335,13 +323,39 @@ img {
 
 /* Event Tooltip text */
 .event .tooltip .tooltip-text {
-  bottom: 0%; /* Adjust this based on where you want the text */
+  bottom: 5%;
+  /* Adjust this based on where you want the text */
 }
 
-/* Media Queries */
-@media (max-width: 576px) {
+/* MEDIA QUERIES */
+@media (max-width: 1200px) {
   .events {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .events {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .upcoming-events .tooltip .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }
+  .event img:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 923px) {
+  html {
+    scroll-padding-top: 133px;
+  }
+}
+
+@media (max-width: 801px) {
+  html {
+    scroll-padding-top: 118px;
   }
 }
 
@@ -364,72 +378,6 @@ img {
 
   .event img:hover {
     transform: none;
-  }
-}
-
-@media (max-width: 801px) {
-  html {
-    scroll-padding-top: 118px;
-  }
-}
-
-@media (max-width: 923px) {
-  html {
-    scroll-padding-top: 133px;
-  }
-}
-
-@media (max-width: 992px) {
-  .events {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 1200px) {
-  .events {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 1200px) {
-  .events {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 992px) {
-  .events {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 923px) {
-  html {
-    scroll-padding-top: 133px;
-  }
-}
-
-@media (max-width: 801px) {
-  html {
-    scroll-padding-top: 118px;
-  }
-}
-
-@media (max-width: 768px) {
-  #main-menu-items {
-    display: none;
-  }
-
-  .navbar .mobile-menu {
-    display: block;
-  }
-
-  .navbar .mobile-menu-toggle {
-    padding-top: 1rem;
-  }
-
-  .events {
-    grid-template-columns: 1fr;
   }
 }
 
