@@ -353,6 +353,20 @@ img {
   }
 }
 
+/* Better legibility on mobile landscape orientation */
+@media only screen and (max-width: 812px) and (orientation: landscape) {
+  body {
+    font-size: 80%; /* Reduce the font size for landscape mode */
+  }
+
+  .navbar {
+  }
+
+  .hero .logo {
+    display: none;
+  }
+}
+
 @media (max-width: 801px) {
   html {
     scroll-padding-top: 118px;
