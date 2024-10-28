@@ -393,7 +393,7 @@ img {
     color: #fff;
     text-align: center;
     padding: 10px 10px; /* Double the padding to make it larger */
-    font-size: 1.5rem; /* Increase font size to double the text size */
+    font-size: 1rem; /* Increase font size to double the text size */
     bottom: -250%; /* Adjust bottom based on where you want the text */
     border-radius: 4px;
     position: absolute;
