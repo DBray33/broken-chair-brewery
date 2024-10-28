@@ -354,7 +354,7 @@ img {
 
 @media (max-width: 922px) {
   html {
-    scroll-padding-top: 133px;
+    scroll-padding-top: 55px;
   }
 
   .navbar {
@@ -367,6 +367,10 @@ img {
   body {
     /* Reduce the font size for landscape mode */
     font-size: 60%;
+  }
+
+  html {
+    scroll-padding-top: 53px;
   }
 
   .navbar {
