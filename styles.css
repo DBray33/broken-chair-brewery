@@ -537,6 +537,7 @@ iframe {
 
 /* Gallery */
 .gallery {
+  padding: 4rem 2rem;
   overflow: hidden;
   background-color: var(--light-blue);
 }
@@ -568,6 +569,43 @@ iframe {
 .gallery-item:nth-of-type(7) {
   grid-column: span 2;
   grid-row: span 2;
+}
+
+/* CONTACT FORM */
+.contact {
+  padding: 3rem 0 4rem;
+}
+
+.contact p {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin: 2rem 0;
+}
+
+.contact input,
+.contact textarea {
+  border: none;
+  border-bottom: 1px #333 solid;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  padding-bottom: 1rem;
+}
+
+.contact textarea {
+  height: 200px;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  outline: 0;
+}
+
+.contact button {
+  width: 100%;
 }
 
 /* MEDIA QUERIES */
