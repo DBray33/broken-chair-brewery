@@ -358,7 +358,7 @@ img {
 }
 
 /* Better legibility on mobile landscape orientation */
-@media only screen and (max-width: 932px) and (orientation: landscape) {
+@media only screen and (max-width: 935px) and (orientation: landscape) {
   body {
     /* Reduce the font size for landscape mode */
     font-size: 60%;
