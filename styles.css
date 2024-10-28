@@ -358,13 +358,14 @@ img {
 }
 
 /* Better legibility on mobile landscape orientation */
-@media only screen and (max-width: 812px) and (orientation: landscape) {
+@media only screen and (max-width: 932px) and (orientation: landscape) {
   body {
-    font-size: 80%; /* Reduce the font size for landscape mode */
+    /* Reduce the font size for landscape mode */
+    font-size: 60%;
   }
 
   .navbar {
-    font-size: 0.6rem;
+    /* font-size: 0.6rem; */
   }
 
   .hero .logo {
