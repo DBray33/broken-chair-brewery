@@ -334,7 +334,6 @@ img {
 }
 
 /* ABOUT SECTION */
-/* ABOUT SECTION */
 .about-container {
   background: url('images/ToddJoan.jpg') top center/cover no-repeat;
   display: flex;
@@ -473,6 +472,31 @@ img {
 
   .about-content h2 {
     font-size: clamp(1.2rem, 1.8vw, 1.6rem);
+  }
+}
+
+@media (max-height: 467px) {
+  .about-content ul {
+    font-size: 0.4rem;
+    padding: 0 2rem 1rem;
+  }
+
+  .about-left {
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .about-left {
+    display: none; /* Hide the left image side */
+  }
+
+  .about-content {
+    width: 100vw; /* Full width for the content */
+    position: relative; /* Reset position to allow full-width text */
+    left: 0; /* Ensure the content takes the full width */
+    padding: 2rem;
   }
 }
 
