@@ -520,7 +520,7 @@ iframe {
   .about {
     background: linear-gradient(
         rgba(0, 62, 96, 0.7),
-        /* Color tint with 70% opacity */ rgba(0, 62, 96, 0.7)
+        /* Color tint with 70% opacity */ rgba(0, 62, 96, 0.3)
       ),
       url('images/toddandjoan.jpg') top center/cover no-repeat;
     text-align: center;
