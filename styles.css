@@ -21,7 +21,8 @@ body {
   line-height: 1.6;
   scroll-behavior: smooth;
   overflow-x: hidden;
-  scroll-padding-top: 66px; /* Adjust this value based on the height of your navbar */
+  /* Adjusted based on navbar height, margin of section can affect where the scroll stops when you click the navbar link */
+  scroll-padding-top: 50px;
 }
 
 a {
@@ -402,7 +403,8 @@ img {
 
 /* BEER MENU */
 .beer-menu {
-  margin: 2rem auto;
+  border: var(--primary-color);
+  margin: 0 auto;
   padding: 0 2rem;
   text-align: center;
 }
@@ -635,6 +637,9 @@ iframe {
 }
 
 @media (max-width: 768px) {
+  html {
+    scroll-padding-top: 66px;
+  }
   /* NAVBAR switches from links to hamburger menu */
   #main-menu-items {
     display: none;
