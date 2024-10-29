@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+// Beer Menu
 window.addEventListener('load', function () {
   const iframe = document.querySelector('iframe');
 
