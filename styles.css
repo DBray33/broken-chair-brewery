@@ -420,12 +420,13 @@ iframe {
   }
 }
 
-/* Gallery */
+/* GALLERY */
 .gallery {
   padding: 4rem 2rem;
   overflow: hidden;
   background-color: var(--light-blue);
 }
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -538,7 +539,7 @@ iframe {
 
 @media (max-width: 922px) {
   html {
-    scroll-padding-top: 55px;
+    scroll-padding-top: 39px;
   }
 
   .navbar {
@@ -583,7 +584,7 @@ iframe {
   }
 
   .navbar {
-    /* font-size: 0.6rem; */
+    font-size: 0.6rem;
   }
 
   .hero .logo {
@@ -660,6 +661,10 @@ iframe {
 
   .event img:hover {
     transform: none;
+  }
+
+  .event .tooltip-text {
+    font-size: 0.8rem;
   }
 
   /* ABOUT */
