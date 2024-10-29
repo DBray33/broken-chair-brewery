@@ -498,7 +498,7 @@ iframe {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* Tooltip static display, hover effect removed when narrowed */
+  /* Tooltip static display ON, hover effect removed when narrowed */
   .upcoming-events .tooltip .tooltip-text {
     visibility: visible;
     opacity: 1;
@@ -515,6 +515,30 @@ iframe {
 
   .navbar {
     font-size: 0.7rem;
+  }
+
+  .about {
+    background: linear-gradient(
+        rgba(0, 62, 96, 0.7),
+        /* Color tint with 70% opacity */ rgba(0, 62, 96, 0.7)
+      ),
+      url('images/toddandjoan.jpg') top center/cover no-repeat;
+    text-align: center;
+  }
+
+  .about-content {
+    background: none;
+    padding: 2rem;
+    z-index: 1;
+  }
+
+  .about .about-flex {
+    flex-direction: column;
+  }
+
+  .about-left {
+    max-width: 600px;
+    margin-top: 2rem;
   }
 }
 
