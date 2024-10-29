@@ -691,6 +691,7 @@ iframe {
 
 @media (max-width: 576px) {
   .events {
+    padding: 0 0.5rem 1rem;
     /* grid-template-columns: repeat(2, 1fr); */
   }
 
