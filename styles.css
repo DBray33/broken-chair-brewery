@@ -36,6 +36,31 @@ img {
   max-width: 100%;
 }
 
+/* BACK TO TOP BUTTON */
+#back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  font-size: 24px;
+  padding: 10px 15px;
+  border-radius: 50%;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s, visibility 0.4s;
+  z-index: 1000;
+}
+
+/* Show the button when the user scrolls down */
+#back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
 /* UTILITY CLASSES */
 .container {
   max-width: 1200px;
@@ -335,6 +360,7 @@ img {
 /* ABOUT SECTION */
 .about-container {
   display: flex;
+  flex-direction: row;
 }
 
 /* Left pic */
@@ -517,6 +543,7 @@ iframe {
     font-size: 0.7rem;
   }
 
+  /* ABOUT */
   .about {
     background: linear-gradient(
         rgba(0, 62, 96, 0.7),
@@ -559,18 +586,20 @@ iframe {
 
   .hero .logo {
     /* Remove display: none and set the logo to scale responsively */
-    width: 50%; /* Adjust this percentage to scale the logo appropriately */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 300px; /* Optional: to limit maximum size */
-    top: 50%; /* Adjust vertical positioning if needed */
+    /* Adjust this percentage to scale the logo appropriately */
+    width: 50%;
+    /* Maintain aspect ratio */
+    height: auto;
+    /* Optional: to limit maximum size */
+    max-width: 300px;
+    /* Adjust vertical positioning if needed */
+    top: 50%;
     left: 50%;
-    transform: translate(
-      -50%,
-      -50%
-    ); /* Center the logo horizontally and adjust as needed */
+    /* Center the logo horizontally and adjust as needed */
+    transform: translate(-50%, -50%);
   }
 
-  /* Tooltip text */
+  /* Tooltip text static display for events section */
   .event .tooltip-text {
     visibility: hidden;
     background-color: #333;
@@ -606,7 +635,7 @@ iframe {
 }
 
 @media (max-width: 768px) {
-  /* navbar switches from links to hamburger menu */
+  /* NAVBAR switches from links to hamburger menu */
   #main-menu-items {
     display: none;
   }
@@ -619,14 +648,16 @@ iframe {
     padding-top: 1rem;
   }
 
+  /* EVENTS */
   .events {
-    grid-template-columns: 1fr;
+    /* grid-template-columns: repeat(2fr); */
   }
 
   .event img:hover {
     transform: none;
   }
 
+  /* ABOUT */
   .about-left {
     display: none;
   }
@@ -650,7 +681,13 @@ iframe {
 
 @media (max-width: 576px) {
   .events {
-    grid-template-columns: 1fr;
+    /* grid-template-columns: repeat(2, 1fr); */
+  }
+
+  .about {
+    display: flex;
+    flex-direction: row;
+    flex-direction: column-reverse; /* Reverses the order */
   }
 }
 

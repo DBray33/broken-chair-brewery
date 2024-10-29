@@ -56,3 +56,23 @@ window.addEventListener('load', function () {
   iframe.onload = resizeIframe;
   window.addEventListener('resize', resizeIframe);
 });
+
+// Show the "Back to Top" button after scrolling down
+window.addEventListener('scroll', function () {
+  const backToTopButton = document.getElementById('back-to-top');
+  if (window.scrollY > 300) {
+    // Show after scrolling 300px
+    backToTopButton.classList.add('show');
+  } else {
+    backToTopButton.classList.remove('show');
+  }
+});
+
+// Smooth scroll to the top when the button is clicked
+document.getElementById('back-to-top').addEventListener('click', function (e) {
+  e.preventDefault();
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+});
