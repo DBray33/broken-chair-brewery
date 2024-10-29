@@ -359,6 +359,10 @@ img {
 }
 
 /* ABOUT SECTION */
+/* Mobile only picture */
+.about img {
+  display: none;
+}
 .about-container {
   display: flex;
   flex-direction: row;
@@ -672,11 +676,16 @@ iframe {
     display: none;
   }
 
+  .about img {
+    display: block;
+  }
+
   .about-container {
     flex-direction: column;
   }
 
   .about-content {
+    background-color: var(--primary-color);
     padding: 2rem;
   }
 
