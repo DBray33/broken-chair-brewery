@@ -560,8 +560,8 @@ iframe {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 90vh; /* Ensure the section covers full viewport height */
-  padding-bottom: 3rem; /* Ensure space at the bottom of the section */
+  min-height: 90vh;
+  padding-bottom: 3rem;
 }
 
 .location h2 {
