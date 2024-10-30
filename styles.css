@@ -519,11 +519,9 @@ iframe {
 
 .contact-form .btn {
   display: block;
-  /* border-color: var(--primary-color); */
-  width: 100%;
-  font-size: inherit;
-  font-family: inherit;
-  margin: 2rem auto 0; /* Ensures the button is centered with some top margin */
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  text-align: center;
 }
 
 .contact .btn:hover {
@@ -532,6 +530,48 @@ iframe {
   border-color: var(--secondary-color);
   cursor: pointer;
   transform: scale(1);
+}
+
+/* Location */
+.location {
+  background: url('images/crowler.jpg') top center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh; /* Ensure the section covers full viewport height */
+  padding-bottom: 3rem; /* Ensure space at the bottom of the section */
+}
+
+/* .location h2 {
+  color: var(--secondary-color);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+} */
+
+.location p {
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.location .map {
+  max-width: 100%;
+  width: 60vw; /* Full width of container */
+  height: 60vh; /* Set a fixed height relative to viewport */
+  overflow: hidden;
+  position: relative;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+}
+
+.location .map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 /* MEDIA QUERIES */
