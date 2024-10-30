@@ -462,7 +462,7 @@ iframe {
   grid-row: span 2;
 }
 
-/* Contact Form */
+/* CONTACT FORM */
 .contact {
   background: linear-gradient(to bottom, #e3e9ef 0%, rgba(227, 233, 239, 0) 50%),
     url('images/contact-form-background.png') top center/cover no-repeat;
