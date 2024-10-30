@@ -640,8 +640,25 @@ iframe {
 
 .footer-flex {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+}
+
+.footer-links {
+  padding: 0 2rem;
+}
+
+@media (max-width: 871px) {
+  .footer-flex {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-flex p {
+    /* font-size: 80%; */
+    padding-bottom: 1rem;
+  }
 }
 
 .footer a {
