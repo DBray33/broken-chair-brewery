@@ -405,17 +405,20 @@ img {
   color: var(--secondary-color);
 }
 
-/* BEER MENU */
-.beer-menu {
-  border: var(--primary-color);
-  margin: 0 auto;
-  padding: 0 2rem;
-  text-align: center;
+/* BEERS */
+.beer-menu-container {
+  max-height: 1700px;
+  background-color: #f2f2f2; /* Adjust this to any color you prefer */
+  padding: 2rem; /* Adds padding around the iframe and content */
+  border-radius: 8px; /* Optional, to add rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 3rem auto; /* Center the beer menu container and add some margin on top/bottom */
 }
 
 iframe {
-  width: 100%;
-  height: 80vh; /* Responsive initial height */
+  padding: 0 3rem;
+  border-radius: 8px; /* Adds rounded corners to the iframe */
+  border: none; /* Removes any borders on the iframe */
 }
 
 @media (max-width: 768px) {
@@ -543,22 +546,22 @@ iframe {
   padding-bottom: 3rem; /* Ensure space at the bottom of the section */
 }
 
-/* .location h2 {
-  color: var(--secondary-color);
+.location h2 {
+  color: #fff;
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1rem;
-} */
+}
 
-.location p {
+/* .location p {
   color: #fff;
   margin-bottom: 2rem;
-}
+} */
 
 .location .map {
   max-width: 100%;
-  width: 60vw; /* Full width of container */
-  height: 60vh; /* Set a fixed height relative to viewport */
+  width: 60vw;
+  height: 60vh;
   overflow: hidden;
   position: relative;
   border-radius: 0.25rem;
@@ -566,6 +569,7 @@ iframe {
 }
 
 .location .map iframe {
+  padding: 0;
   position: absolute;
   top: 0;
   left: 0;
