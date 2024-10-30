@@ -705,7 +705,7 @@ iframe {
   }
 
   .about img {
-    display: block;
+    /* display: block; */
   }
 
   .contact .btn {
