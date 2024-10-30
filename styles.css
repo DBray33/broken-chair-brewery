@@ -710,6 +710,13 @@ iframe {
   }
 }
 
+@media (max-width: 791px) {
+  /* BEER MENU */
+  iframe {
+    padding: 0;
+  }
+}
+
 @media (max-width: 768px) {
   html {
     scroll-padding-top: 66px;
