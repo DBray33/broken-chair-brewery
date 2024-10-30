@@ -315,7 +315,11 @@ img {
 }
 
 /* UPCOMING EVENTS */
-.upcoming-events p {
+.upcoming-events {
+  background: var(--light-blue);
+}
+
+.upcoming-eventsp {
   font-weight: 600;
   padding: 0 2rem;
 }
@@ -412,7 +416,7 @@ img {
 }
 .beer-menu-container {
   max-height: 1700px;
-  background: linear-gradient(to bottom, #fff8a1 0%, #ffffff 50%, #e3e9ef 100%);
+  background: linear-gradient(to bottom, #fff8a1 0%, #ffffff 25%, #e3e9ef 100%);
 
   padding: 2rem;
   border-radius: 8px;
@@ -447,7 +451,7 @@ iframe {
     to bottom,
     #e3e9ef 0%,
     #fff8a1 30%,
-    #ffffff 50%,
+    #fe8d19 50%,
     #e3e9ef 100%
   );
 }
@@ -641,39 +645,60 @@ iframe {
 .footer-flex {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .footer-links {
-  padding: 0 2rem;
-}
-
-@media (max-width: 871px) {
-  .footer-flex {
-    justify-content: center;
-    text-align: center;
-  }
-
-  .footer-flex p {
-    /* font-size: 80%; */
-    padding-bottom: 1rem;
-  }
-}
-
-.footer a {
-  color: #f1f4f6;
-}
-
-.footer a:hover {
-  color: var(--secondary-color);
-}
-
-.footer ul {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
-  margin: 2rem 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 1rem; /* Add margin to separate it from the copyright text */
+}
+
+.footer-links li {
+  margin: 0 1rem; /* Space between the links */
+}
+
+.footer-links li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-links li a:hover {
+  color: var(--tertiary-color);
+}
+
+.footer p {
+  width: 100%; /* Ensures it spans the full width below the links */
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+/* Media Query for smaller screens */
+@media (min-width: 768px) {
+  .footer-flex {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .footer-links {
+    justify-content: flex-start;
+  }
+
+  .footer p {
+    text-align: right;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer p {
+    text-align: center;
+    font-size: 80%;
+  }
 }
 
 /* MEDIA QUERIES */
@@ -737,6 +762,16 @@ iframe {
 
 /* Better legibility on mobile landscape orientation */
 @media only screen and (max-width: 935px) and (max-height: 430px) and (orientation: landscape) {
+  .footer-flex {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-flex p {
+    font-size: 80%;
+    padding-bottom: 1rem;
+  }
+
   body {
     /* Reduce the font size for landscape mode */
     font-size: 60%;
