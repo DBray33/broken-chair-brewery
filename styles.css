@@ -408,17 +408,23 @@ img {
 /* BEERS */
 .beer-menu-container {
   max-height: 1700px;
-  background-color: #f2f2f2; /* Adjust this to any color you prefer */
-  padding: 2rem; /* Adds padding around the iframe and content */
-  border-radius: 8px; /* Optional, to add rounded corners */
+  background-color: #f2f2f2;
+  padding: 2rem;
+  border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 0 3rem auto; /* Center the beer menu container and add some margin on top/bottom */
+  margin: 0 auto;
+  overflow: auto;
 }
 
 iframe {
-  padding: 0 3rem;
-  border-radius: 8px; /* Adds rounded corners to the iframe */
-  border: none; /* Removes any borders on the iframe */
+  max-width: 1200px;
+  display: block;
+  margin: 0 auto 2rem;
+  padding: 0 3rem 2rem;
+  border-radius: 8px;
+  border: none;
+  max-height: 1000px; /* Constrain iframe height */
+  overflow: hidden;
 }
 
 @media (max-width: 768px) {
@@ -548,6 +554,7 @@ iframe {
 
 .location h2 {
   background: var(--primary-color);
+  padding: 0 1rem;
   color: #fff;
   font-size: 2rem;
   font-weight: 700;
