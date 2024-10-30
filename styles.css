@@ -535,7 +535,7 @@ iframe {
   transform: scale(1);
 }
 
-/* Location */
+/* LOCATION & HOURS */
 .location {
   background: url('images/crowler.jpg') top center/cover no-repeat;
   display: flex;
@@ -547,10 +547,12 @@ iframe {
 }
 
 .location h2 {
+  background: var(--primary-color);
   color: #fff;
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
 }
 
 /* .location p {
@@ -560,6 +562,7 @@ iframe {
 
 .location .map {
   max-width: 100%;
+  margin: 0 auto;
   width: 60vw;
   height: 60vh;
   overflow: hidden;
