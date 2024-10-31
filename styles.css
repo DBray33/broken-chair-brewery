@@ -552,24 +552,35 @@ iframe {
 
 /* LOCATION & HOURS */
 .location {
-  background: url('images/contact-form-background.png') top center/cover
-    no-repeat;
+  background: url('images/crowler.jpg') top center/cover no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 90vh;
   padding-bottom: 3rem;
+  /* padding-top: 3rem; */
+  position: relative;
 }
 
 .location h2 {
-  background: var(--primary-color);
+  width: 100vw;
+  background: rgba(
+    0,
+    62,
+    96,
+    0.8
+  ); /* Adjust the last value (0.8) for transparency */
   padding: 0 1rem;
   color: #fff;
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1rem;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* .location p {
