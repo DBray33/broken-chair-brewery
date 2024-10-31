@@ -371,6 +371,7 @@ img {
 .about-container {
   display: flex;
   flex-direction: row;
+  height: ;
 }
 
 /* Left pic */
@@ -488,9 +489,8 @@ iframe {
 
 /* CONTACT FORM */
 .contact {
-  background: linear-gradient(to bottom, #fe8d19 0%, rgba(227, 233, 239, 0) 50%),
+  background: linear-gradient(to bottom, #fe8d19 0%, rgba(227, 233, 239, 0) 18%),
     url('images/contact-form-background.png') top center/cover no-repeat;
-  /* Centers the entire contact section horizontally */
   margin: 0 auto;
   padding: 2rem;
   display: flex;
@@ -498,7 +498,7 @@ iframe {
   justify-content: center;
   /* Centers content vertically */
   align-items: center;
-  /* Ensures it takes at least the full viewport height */
+  /* Ensures section takes at least the full viewport height */
   min-height: 100vh;
 }
 
@@ -561,16 +561,29 @@ iframe {
   padding-bottom: 3rem;
   /* padding-top: 3rem; */
   position: relative;
+  overflow: hidden; /* Ensure overlay stays within bounds */
+}
+
+.location::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity for darkening */
+  z-index: 1;
+}
+
+/* Ensure content appears above the overlay */
+.location > * {
+  position: relative;
+  z-index: 2;
 }
 
 .location h2 {
   width: 100vw;
-  background: rgba(
-    0,
-    62,
-    96,
-    0.8
-  ); /* Adjust the last value (0.8) for transparency */
+  background: rgba(0, 62, 96, 0.8);
   padding: 0 1rem;
   color: #fff;
   font-size: 2rem;
@@ -578,15 +591,18 @@ iframe {
   margin-bottom: 1rem;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
   position: absolute;
-  top: 0;
+  top: -5%;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 3;
 }
 
-/* .location p {
+.location p {
   color: #fff;
+  font-weight: 600;
+  text-align: center;
   margin-bottom: 2rem;
-} */
+}
 
 .location .map {
   max-width: 100%;
@@ -602,11 +618,17 @@ iframe {
 .location .map iframe {
   padding: 0;
   position: absolute;
-  top: 0;
+  top: ;
   left: 0;
   width: 100%;
   height: 100%;
   border: none;
+}
+
+@media (max-width: 557px) {
+  .location h2 {
+    font-size: 3vh;
+  }
 }
 
 /* SOCIAL */
