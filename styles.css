@@ -494,11 +494,8 @@ iframe {
   margin: 0 auto;
   padding: 2rem;
   display: flex;
-  /* Centers content horizontally */
   justify-content: center;
-  /* Centers content vertically */
   align-items: center;
-  /* Ensures section takes at least the full viewport height */
   min-height: 100vh;
 }
 
@@ -517,7 +514,7 @@ iframe {
 .contact-form p {
   color: #fff;
   margin-bottom: 3rem;
-  text-align: center; /* Centers the paragraph text */
+  text-align: center;
 }
 
 .contact-form input,
