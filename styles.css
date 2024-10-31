@@ -578,7 +578,7 @@ iframe {
   z-index: 2;
 }
 
-.location h2 {
+/* .location h2 {
   width: 100vw;
   background: rgba(0, 62, 96, 0.8);
   padding: 0 1rem;
@@ -592,7 +592,7 @@ iframe {
   left: 50%;
   transform: translateX(-50%);
   z-index: 3;
-}
+} */
 
 .location p {
   color: #fff;
