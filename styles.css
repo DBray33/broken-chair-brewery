@@ -319,7 +319,7 @@ img {
   background: var(--light-blue);
 }
 
-.upcoming-eventsp {
+.upcoming-events p {
   font-weight: 600;
   padding: 0 2rem;
 }
@@ -416,7 +416,7 @@ img {
 }
 .beer-menu-container {
   max-height: 1700px;
-  background: linear-gradient(to bottom, #fff8a1 0%, #ffffff 25%, #e3e9ef 100%);
+  background: linear-gradient(to bottom, #fff8a1 0%, #ffffff 25%, #88add3 100%);
 
   padding: 2rem;
   border-radius: 8px;
@@ -449,7 +449,7 @@ iframe {
   margin: 0 auto;
   background: linear-gradient(
     to bottom,
-    #e3e9ef 0%,
+    #88add3 0%,
     #fff8a1 30%,
     #fe8d19 50%,
     #e3e9ef 100%
@@ -492,6 +492,7 @@ iframe {
     url('images/contact-form-background.png') top center/cover no-repeat;
   /* Centers the entire contact section horizontally */
   margin: 0 auto;
+  padding: 2rem;
   display: flex;
   /* Centers content horizontally */
   justify-content: center;
@@ -506,17 +507,10 @@ iframe {
 }
 
 .contact-form {
-  /* Ensures form takes the full width of its container */
-  width: 100%;
-  /* Limits the form width to prevent it from being too wide */
   max-width: 600px;
-  /* Adds some padding around the form */
-  padding: 2rem;
-  /* Optional: Background for better contrast */
+  padding: 1rem;
   background-color: var(--primary-color);
-  /* Optional: Add a subtle shadow */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
-  /* Optional: Add rounded corners */
   border-radius: 8px;
 }
 
@@ -538,7 +532,7 @@ iframe {
 }
 
 .contact-form textarea {
-  height: 200px;
+  height: 100px;
 }
 
 .contact-form .btn {
@@ -549,11 +543,11 @@ iframe {
 }
 
 .contact .btn:hover {
-  background: var(--primary-color);
-  color: var(--secondary-color);
-  border-color: var(--secondary-color);
+  background: var(--tertiary-color);
+  color: var(--primary-color);
+  border-color: var(--primary-color);
   cursor: pointer;
-  transform: scale(1);
+  transform: scale(1.1);
 }
 
 /* LOCATION & HOURS */
