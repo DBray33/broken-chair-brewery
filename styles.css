@@ -450,9 +450,9 @@ iframe {
   background: linear-gradient(
     to bottom,
     #88add3 0%,
-    #fff8a1 30%,
-    #fe8d19 50%,
-    #e3e9ef 100%
+    #e3e9ef 30%,
+    #fff8a1 50%,
+    #fe8d19 100%
   );
 }
 
@@ -488,7 +488,7 @@ iframe {
 
 /* CONTACT FORM */
 .contact {
-  background: linear-gradient(to bottom, #e3e9ef 0%, rgba(227, 233, 239, 0) 50%),
+  background: linear-gradient(to bottom, #fe8d19 0%, rgba(227, 233, 239, 0) 50%),
     url('images/contact-form-background.png') top center/cover no-repeat;
   /* Centers the entire contact section horizontally */
   margin: 0 auto;
