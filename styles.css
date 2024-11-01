@@ -292,9 +292,13 @@ img {
   padding-bottom: 2rem;
 }
 
-.announcements .list {
+.announcements p {
   max-width: 1200px;
   margin: 0 auto;
+  background: white;
+  padding: 2rem;
+  overflow: scroll;
+  max-height: 60vh;
 }
 
 .list-header {
@@ -307,12 +311,12 @@ img {
   margin: 1rem 0;
 }
 
-.announcements .list-item {
+/* .announcements .list-item {
   max-width: 1200px;
   width: auto;
   background-color: #fff;
   padding: 2rem;
-}
+} */
 
 /* UPCOMING EVENTS */
 .upcoming-events {
