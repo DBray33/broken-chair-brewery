@@ -680,6 +680,33 @@ iframe {
   text-align: center;
 }
 
+/* SHOP */
+
+/* Specific Styles for the Shop Hero */
+.shop-hero {
+  background: url('images/shop-hero.jpg') top center/cover no-repeat;
+}
+
+/* Center the content within hero-content */
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.shop-hero .centered-text {
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  padding: 1rem; /* Add padding to give more spacing around the text */
+  margin: 200px auto 0; /* Center horizontally and add top margin */
+  display: inline-block; /* Ensures it takes only as much width as the content */
+  width: 80%; /* Ensures it centers within its container */
+}
+
 /* Media Query for smaller screens */
 @media (min-width: 768px) {
   .footer-flex {
