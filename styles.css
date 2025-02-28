@@ -711,6 +711,11 @@ img {
   text-align: center;
 }
 
+.footer-link {
+  color: white !important;
+  text-decoration: underline !important;
+}
+
 /* SHOP */
 
 /* Specific Styles for the Shop Hero */
